@@ -39,6 +39,8 @@
     "react/prop-types": "off",
     "consistent-return": "off",
     "no-useless-return": "off",
-    "react/no-array-index-key": "off"
+    "react/no-array-index-key": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "import/no-extraneous-dependencies": "off"
   }
 }
