@@ -1,8 +1,10 @@
-import { GAScript, ToastProvider } from "@shared/components/module";
+/* eslint-disable react/no-danger */
+import { ToastProvider } from "@shared/components/module";
 import "common/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import { useEffect } from "react";
 import * as gtag from "utils/gtag";
 
@@ -26,9 +28,24 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_ID}', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
         <title>다독 - 독서 관리 서비스</title>
       </Head>
-      <GAScript GA_ID={GA_ID} />
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+        strategy="afterInteractive"
+      />
       <Component {...pageProps} />
       <ToastProvider />
     </>
