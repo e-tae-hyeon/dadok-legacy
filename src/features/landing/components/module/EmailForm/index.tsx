@@ -14,11 +14,13 @@ function EmailForm({ theme }: Props) {
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     try {
       e.preventDefault();
+      if (!email) return;
       await createReservation(email);
       setConfig({
         type: "success",
         message: "알림이 등록되었어요 :)",
       });
+      setEmail("");
     } catch (err) {
       setConfig({
         type: "error",
@@ -28,7 +30,7 @@ function EmailForm({ theme }: Props) {
   };
 
   return (
-    <form onSubmit={onSubmit} className="flex gap-2">
+    <form onSubmit={onSubmit} className="flex flex-col gap-2 md:flex-row">
       <input
         placeholder="이메일을 입력해주세요."
         value={email}
