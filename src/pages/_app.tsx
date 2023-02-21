@@ -1,6 +1,7 @@
 import { GAScript, ToastProvider } from "@shared/components/module";
 import "common/styles/globals.css";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import * as gtag from "utils/gtag";
@@ -24,6 +25,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <title>다독 - 독서 관리 서비스</title>
+      </Head>
       <GAScript GA_ID={GA_ID} />
       <Component {...pageProps} />
       <ToastProvider />
