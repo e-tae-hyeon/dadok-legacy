@@ -9,7 +9,7 @@ function ToastProvider() {
     setTimeout(() => clearConfig(), 3000);
   }, [config]);
 
-  return <Toast config={config!} />;
+  return <Toast config={config} />;
 }
 
 export default ToastProvider;
