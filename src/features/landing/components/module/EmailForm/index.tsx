@@ -15,7 +15,7 @@ function EmailForm({ theme }: Props) {
     try {
       e.preventDefault();
       if (!email) return;
-      await createReservation(email);
+      createReservation(email);
       setConfig({
         type: "success",
         message: "알림이 등록되었어요 :)",
