@@ -3,9 +3,10 @@ import React from "react";
 
 type Props = {
   isVisible: boolean;
+  onClick: () => void;
 };
 
-function Overlay({ isVisible }: Props) {
+function Overlay({ isVisible, onClick }: Props) {
   return (
     <AnimatePresence>
       {isVisible && (
@@ -14,7 +15,8 @@ function Overlay({ isVisible }: Props) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.8 }}
           exit={{ opacity: 0 }}
-          className="absolute inset-0 bg-neutral-900"
+          onClick={onClick}
+          className="fixed inset-0 bg-neutral-900"
         />
       )}
     </AnimatePresence>

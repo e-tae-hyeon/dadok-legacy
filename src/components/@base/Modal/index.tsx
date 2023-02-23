@@ -4,13 +4,14 @@ import Overlay from "../Overlay";
 
 type Props = {
   isVisible: boolean;
+  onBackDrop: () => void;
   children: React.ReactNode;
 };
 
-function Modal({ isVisible, children }: Props) {
+function Modal({ isVisible, onBackDrop, children }: Props) {
   return (
     <>
-      <Overlay isVisible={isVisible} />
+      <Overlay isVisible={isVisible} onClick={onBackDrop} />
       <AnimatePresence>
         {isVisible && (
           <motion.div
@@ -18,9 +19,9 @@ function Modal({ isVisible, children }: Props) {
             initial={{ opacity: 0, y: 300 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 300 }}
-            className="absolute top-1/2 left-1/2"
+            className="fixed top-1/2 left-1/2"
           >
-            <div className="p-4 -translate-x-1/2 -translate-y-1/2">
+            <div className="p-4 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg">
               {children}
             </div>
           </motion.div>
