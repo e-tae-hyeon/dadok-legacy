@@ -15,10 +15,6 @@
   word-break: keep-all;
 }
 
-html {
-  @apply bg-neutral-50;
-}
-
 .hero {
   @apply text-[2.5rem];
 }
