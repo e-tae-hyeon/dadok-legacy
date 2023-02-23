@@ -1,12 +1,8 @@
-import { Sidebar } from "components/Global/template";
+import { Layout } from "components/Global/template";
 import React from "react";
 
 function UserPage() {
-  return (
-    <div>
-      <Sidebar />
-    </div>
-  );
+  return <Layout />;
 }
 
 export default UserPage;
