@@ -1,4 +1,4 @@
-import { GAScript, ToastProvider } from "@shared/components/module";
+import { GAScript, ToastProvider } from "@shared/components/template";
 import "common/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";

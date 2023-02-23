@@ -1,4 +1,4 @@
-import { Header } from "@shared/components/module";
+import { Header } from "@shared/components/template";
 import {
   FAQ,
   Feature,
@@ -10,7 +10,7 @@ import React from "react";
 
 function HomePage() {
   return (
-    <div>
+    <div className="bg-white">
       <div className="mx-auto max-w-7xl">
         <Header />
       </div>
