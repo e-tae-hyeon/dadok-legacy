@@ -1,6 +1,6 @@
-import { Toast } from "@shared/components/base";
-import useToastStore from "@shared/stores/useToastStore";
+import { Toast } from "components/@base";
 import React, { useEffect } from "react";
+import useToastStore from "stores/useToastStore";
 
 function ToastProvider() {
   const { config, clearConfig } = useToastStore();

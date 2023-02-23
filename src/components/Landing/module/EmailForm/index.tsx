@@ -1,7 +1,7 @@
-import { Button } from "@shared/components/base";
-import useToastStore from "@shared/stores/useToastStore";
 import { createReservation } from "apis/beta";
+import { Button } from "components/@base";
 import React, { useState } from "react";
+import useToastStore from "stores/useToastStore";
 
 type Props = {
   theme?: "primary" | "secondary";

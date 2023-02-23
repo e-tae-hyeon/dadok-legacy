@@ -1,4 +1,4 @@
-import { ToastConfig } from "@shared/components/base/Toast";
+import { ToastConfig } from "components/@base/Toast";
 import { create } from "zustand";
 
 type State = {

@@ -1,4 +1,4 @@
-import { Logotypo } from "@shared/components/base";
+import { Logotypo } from "components/@base";
 import React from "react";
 
 function Header() {

@@ -1,5 +1,5 @@
-import { GAScript, ToastProvider } from "@shared/components/template";
 import "common/styles/globals.css";
+import { GAScript, ToastProvider } from "components/Global/template";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
