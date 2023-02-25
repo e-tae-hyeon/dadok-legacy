@@ -1,16 +1,11 @@
-import { Header } from "@shared/components/module";
-import {
-  FAQ,
-  Feature,
-  Footer,
-  Hero,
-} from "features/landing/components/template";
+import { Header } from "components/Global/template";
+import { FAQ, Feature, Footer, Hero } from "components/Landing/template";
 import Image from "next/image";
 import React from "react";
 
 function HomePage() {
   return (
-    <div>
+    <div className="bg-white">
       <div className="mx-auto max-w-7xl">
         <Header />
       </div>
