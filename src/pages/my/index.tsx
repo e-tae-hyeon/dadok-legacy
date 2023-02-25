@@ -1,8 +1,8 @@
 import { Layout } from "components/Global/template";
 import React from "react";
 
-function UserPage() {
+function MyHomePage() {
   return <Layout />;
 }
 
-export default UserPage;
+export default MyHomePage;
