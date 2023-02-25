@@ -6,20 +6,19 @@ import React from "react";
 
 type Props = {
   label: string;
-  icon: "home" | "bookClosed";
+  icon: "home" | "bookClosed" | "search";
   to: string;
 };
 
 function MyNavItem({ label, icon, to }: Props) {
   const { asPath } = useRouter();
-  const href = to === "/" ? asPath : asPath + to;
 
   return (
     <Link
-      href={href}
+      href={to}
       type="button"
       className={`${
-        href === asPath && "bg-neutral-700"
+        to === asPath && "bg-neutral-700"
       } flex items-center gap-2 p-4 duration-150 rounded-lg hover:bg-neutral-700`}
     >
       <SvgIcon name={icon} color={palette.primary} />
