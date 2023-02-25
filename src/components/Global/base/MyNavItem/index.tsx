@@ -10,7 +10,7 @@ type Props = {
   to: string;
 };
 
-function NavItem({ label, icon, to }: Props) {
+function MyNavItem({ label, icon, to }: Props) {
   const { asPath } = useRouter();
   const href = to === "/" ? asPath : asPath + to;
 
@@ -28,4 +28,4 @@ function NavItem({ label, icon, to }: Props) {
   );
 }
 
-export default NavItem;
+export default MyNavItem;
