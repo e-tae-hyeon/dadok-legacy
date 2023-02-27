@@ -1,7 +1,7 @@
-import { Logotypo } from "components/@base";
-import { HeaderNavList } from "components/Global/module";
+import Logotypo from "components/@Base/Logotypo";
 import Link from "next/link";
 import React from "react";
+import HeaderNav from "../HeaderNav";
 
 type Props = {
   hasNav?: boolean;
@@ -13,7 +13,7 @@ function Header({ hasNav = true }: Props) {
       <Link href="/">
         <Logotypo />
       </Link>
-      {hasNav && <HeaderNavList />}
+      {hasNav && <HeaderNav />}
     </header>
   );
 }

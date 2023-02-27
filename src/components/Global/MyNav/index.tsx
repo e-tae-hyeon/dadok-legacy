@@ -1,7 +1,7 @@
-import { MyNavItem } from "components/Global/base";
 import React from "react";
+import MyNavItem from "../MyNavItem";
 
-function MyNavList() {
+function MyNav() {
   return (
     <nav className="flex flex-col gap-4">
       <MyNavItem icon="home" label="홈" to="/my" />
@@ -11,4 +11,4 @@ function MyNavList() {
   );
 }
 
-export default MyNavList;
+export default MyNav;

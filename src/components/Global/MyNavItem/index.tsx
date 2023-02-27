@@ -1,5 +1,5 @@
 import palette from "common/styles/palette";
-import { SvgIcon } from "components/@base";
+import SvgIcon from "components/@Base/SvgIcon";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";

@@ -1,4 +1,4 @@
-import { Toast } from "components/@base";
+import Toast from "components/@base/Toast";
 import React, { useEffect } from "react";
 import useToastStore from "stores/useToastStore";
 
