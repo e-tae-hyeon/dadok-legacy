@@ -1,16 +1,16 @@
 import React from "react";
 
-type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   theme?: "primary" | "secondary";
 };
 
-function Button({ theme = "primary", ...rest }: Props) {
+function Button({ theme = "primary", ...rest }: ButtonProps) {
   const { bgColor, textColor } = themeMap[theme];
 
   return (
     <button
       type="button"
-      className={`${bgColor} ${textColor} px-8 py-4 rounded-lg`}
+      className={`${bgColor} ${textColor} px-4 py-3 rounded-lg flex items-center gap-2 justify-center`}
       {...rest}
     />
   );
