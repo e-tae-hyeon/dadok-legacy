@@ -4,11 +4,9 @@ import {
   QueryClientProvider,
 } from "@tanstack/react-query";
 import "common/styles/globals.css";
-import {
-  AuthProvider,
-  GAScript,
-  GlobalProvider,
-} from "components/Global/template";
+import AuthProvider from "components/Global/AuthProvider";
+import GAScript from "components/Global/GAScript";
+import ToastProvider from "components/Global/ToastProvider";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -47,7 +45,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <AuthProvider>
             <Component {...pageProps} />
           </AuthProvider>
-          <GlobalProvider />
+          <ToastProvider />
         </Hydrate>
       </QueryClientProvider>
     </>

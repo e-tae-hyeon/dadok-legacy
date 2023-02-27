@@ -1,8 +1,12 @@
-import { Layout } from "components/Global/template";
+import Layout from "components/Global/Layout";
 import React from "react";
 
 function MyLibraryPage() {
-  return <Layout />;
+  return (
+    <Layout>
+      <div />
+    </Layout>
+  );
 }
 
 export default MyLibraryPage;

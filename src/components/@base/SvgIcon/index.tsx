@@ -2,8 +2,10 @@ import palette from "common/styles/palette";
 import React from "react";
 import * as Icons from "./icons";
 
+export type IconsName = keyof typeof Icons;
+
 type Props = {
-  name: keyof typeof Icons;
+  name: IconsName;
   color?: string;
   size?: number;
 };

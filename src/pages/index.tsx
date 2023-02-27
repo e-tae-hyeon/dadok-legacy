@@ -1,4 +1,4 @@
-import { Header } from "components/Global/template";
+import Header from "components/Global/Header";
 import { FAQ, Feature, Footer, Hero } from "components/Landing/template";
 import Image from "next/image";
 import React from "react";
