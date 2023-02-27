@@ -1,4 +1,4 @@
-import { SvgIcon } from "components/@base";
+import SvgIcon from "components/@Base/SvgIcon";
 import React from "react";
 
 type Provider = "kakao";
@@ -7,7 +7,7 @@ type Props = {
   provider: Provider;
 };
 
-function SocialProvider({ provider }: Props) {
+function SocialLoginProvider({ provider }: Props) {
   const { bgColor, tintColor, icon, label, to } = providersMap[provider];
 
   return (
@@ -22,7 +22,7 @@ function SocialProvider({ provider }: Props) {
   );
 }
 
-export default SocialProvider;
+export default SocialLoginProvider;
 
 const providersMap = {
   kakao: {
