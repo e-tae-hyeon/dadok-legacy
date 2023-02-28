@@ -6,3 +6,9 @@ export async function createBook(params: CreateBookParams) {
 
   return res.data;
 }
+
+export async function getMyBookIsbns() {
+  const res = await client.get<{ isbn: string }[]>("/book/isbn");
+
+  return res.data;
+}

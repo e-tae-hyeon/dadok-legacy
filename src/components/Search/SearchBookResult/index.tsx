@@ -1,10 +1,12 @@
 import BookList from "components/Book/BookList";
+import useMyBookIsbns from "hooks/useMyBookIsbns";
 import useObserve from "hooks/useObserve";
 import useSearchBook from "hooks/useSearchBook";
 import React from "react";
 
 function SearchBookResult() {
   const { books, fetchNextResult } = useSearchBook();
+  const { myBookIsbns } = useMyBookIsbns();
   const { ref } = useObserve({
     handler: fetchNextResult,
     options: {
@@ -15,7 +17,9 @@ function SearchBookResult() {
 
   return (
     <>
-      <BookList books={books} />
+      <BookList
+        books={books.filter((book) => !myBookIsbns.includes(book.isbn))}
+      />
       <div ref={ref} />
     </>
   );

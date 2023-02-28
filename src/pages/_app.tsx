@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import * as gtag from "utils/gtag";
 import "react-toastify/dist/ReactToastify.css";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(
@@ -47,6 +48,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </AuthProvider>
           <ToastContainer />
+          <ReactQueryDevtools initialIsOpen={false} />
         </Hydrate>
       </QueryClientProvider>
     </>

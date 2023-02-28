@@ -25,9 +25,9 @@ function BookActionsTooltip({ isVisible, onClose, book, actions }: Props) {
           className="absolute inset-0 flex items-center justify-center drop-shadow backdrop-blur-sm"
         >
           <div ref={ref} className="px-4 py-2 bg-white rounded-lg">
-            <button type="button" onClick={onClose}>
+            <div onClick={onClose}>
               {actions === "bring" ? <BookBringActions book={book} /> : null}
-            </button>
+            </div>
           </div>
         </motion.div>
       )}

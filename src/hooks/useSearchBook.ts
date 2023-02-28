@@ -1,5 +1,6 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { searchBook } from "apis/search";
+import { Book } from "apis/types";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useDebounce } from "use-debounce";
@@ -26,7 +27,10 @@ function useSearchBook() {
     }
   );
 
-  const books = data?.pages.flatMap((page) => page.documents) ?? [];
+  const books =
+    data?.pages.flatMap((page) =>
+      page.documents.map((book) => ({ ...book, author: book.authors[0] }))
+    ) ?? ([] as Book[]);
 
   const fetchNextResult = () => {
     if (!hasNextPage) return;

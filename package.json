@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.1",
+    "@tanstack/react-query-devtools": "^4.24.12",
     "@types/axios": "^0.14.0",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",

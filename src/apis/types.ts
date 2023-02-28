@@ -25,3 +25,10 @@ export type CreateBookParams = Book & {
 };
 
 export type BookStatus = "todo" | "doing" | "done";
+
+export type BookItem = Book & {
+  id: number;
+  status: BookStatus;
+  startedAt: string | null;
+  updatedAt: string | null;
+};

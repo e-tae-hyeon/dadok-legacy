@@ -1,4 +1,4 @@
-import { KakaoBook } from "apis/types";
+import { Book } from "apis/types";
 import Card from "components/@Base/Card";
 import useBookActionsTooltip from "hooks/useBookActionsTooltip";
 import React from "react";
@@ -8,11 +8,11 @@ import BookImage from "../BookImage";
 import BookInfo from "../BookInfo";
 
 type Props = {
-  book: KakaoBook;
+  book: Book;
 };
 
 function BookCard({ book }: Props) {
-  const { thumbnail, title, authors, isbn } = book;
+  const { thumbnail, title, author } = book;
   const { isVisible, openActions, closeActions } = useBookActionsTooltip();
 
   return (
@@ -20,13 +20,13 @@ function BookCard({ book }: Props) {
       <div className="relative flex gap-4 px-4 py-6">
         <BookImage imageSrc={thumbnail} alt={title} />
         <div className="flex flex-col justify-between flex-1">
-          <BookInfo title={title} author={authors[0]} />
+          <BookInfo title={title} author={author} />
           <BookBringLibButton onClick={openActions} />
         </div>
         <BookActionsTooltip
           isVisible={isVisible}
           onClose={closeActions}
-          book={{ isbn, title, author: authors[0], thumbnail }}
+          book={book}
           actions="bring"
         />
       </div>
