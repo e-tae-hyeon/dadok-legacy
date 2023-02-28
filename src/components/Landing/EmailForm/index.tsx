@@ -1,14 +1,12 @@
 import { createReservation } from "apis/beta";
 import Button from "components/@Base/Button";
 import React, { useState } from "react";
-import useToastStore from "stores/useToastStore";
 
 type Props = {
   theme?: "primary" | "secondary";
 };
 
 function EmailForm({ theme }: Props) {
-  const { setConfig } = useToastStore();
   const [email, setEmail] = useState("");
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -16,16 +14,9 @@ function EmailForm({ theme }: Props) {
       e.preventDefault();
       if (!email) return;
       createReservation(email);
-      setConfig({
-        type: "success",
-        message: "알림이 등록되었어요 :)",
-      });
       setEmail("");
     } catch (err) {
-      setConfig({
-        type: "error",
-        message: "이메일 주소를 다시 한번 확인해주세요.",
-      });
+      //
     }
   };
 

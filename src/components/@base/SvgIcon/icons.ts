@@ -5,3 +5,5 @@ export { default as home } from "assets/icons/home.svg";
 export { default as kakao } from "assets/icons/kakao.svg";
 export { default as search } from "assets/icons/search.svg";
 export { default as settings } from "assets/icons/settings.svg";
+export { default as shoppingCart } from "assets/icons/shopping-cart.svg";
+export { default as trash } from "assets/icons/trash.svg";

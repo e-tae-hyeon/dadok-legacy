@@ -21,7 +21,7 @@ function BookImage({ imageSrc, alt }: Props) {
         width: 103.45,
         height: 150,
       }}
-      className="rounded-lg shadow"
+      className="rounded-lg shadow-lg"
     />
   );
 }

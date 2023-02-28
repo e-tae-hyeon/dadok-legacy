@@ -19,8 +19,4 @@ export default BookSearchPage;
 
 export const getServerSideProps: GetServerSideProps = async ({
   query: { keyword },
-}) => ({
-  props: {
-    keyword,
-  },
-});
+}) => ({ props: { keyword: keyword ?? null } });
