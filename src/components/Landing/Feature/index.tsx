@@ -1,6 +1,5 @@
 import React from "react";
-import type { Props as CopyProps } from "../../module/Copy";
-import { Copy } from "../../module";
+import Copy, { CopyProps } from "../Copy";
 
 type Props = {
   copyLocation?: "left" | "right";

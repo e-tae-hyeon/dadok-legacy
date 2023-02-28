@@ -1,5 +1,5 @@
 import { createReservation } from "apis/beta";
-import { Button } from "components/@base";
+import Button from "components/@Base/Button";
 import React, { useState } from "react";
 import useToastStore from "stores/useToastStore";
 

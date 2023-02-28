@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { EmailForm } from "../../module";
+import EmailForm from "../EmailForm";
 
 function Hero() {
   return (
