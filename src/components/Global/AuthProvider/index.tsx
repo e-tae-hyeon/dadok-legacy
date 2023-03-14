@@ -26,7 +26,7 @@ function AuthProvider({ children }: Props) {
 
   if (isPublicPage(pathname)) return <div>{children}</div>;
 
-  return <div className="bg-neutral-50">{children}</div>;
+  return <div>{children}</div>;
 }
 
 export default AuthProvider;

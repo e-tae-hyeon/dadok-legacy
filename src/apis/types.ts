@@ -30,5 +30,27 @@ export type BookItem = Book & {
   id: number;
   status: BookStatus;
   startedAt: string | null;
-  updatedAt: string | null;
+  endedAt: string | null;
+};
+
+export type Proflie = {
+  userId: number;
+  name: string;
+  description?: string;
+};
+
+export type GetMyBooksParams = {
+  status: BookStatus;
+  lastId?: number;
+  take?: number;
+};
+
+export type GetMyBooksResult = {
+  books: BookItem[];
+  pageInfo: PageInfo;
+};
+
+export type PageInfo = {
+  endCursor: number | null;
+  hasNextPage: boolean;
 };

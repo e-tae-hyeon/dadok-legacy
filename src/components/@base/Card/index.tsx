@@ -5,7 +5,7 @@ type Props = {
 };
 
 function Card({ children }: Props) {
-  return <div className="bg-white rounded-lg shadow">{children}</div>;
+  return <div className="bg-white rounded-lg">{children}</div>;
 }
 
 export default Card;

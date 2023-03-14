@@ -3,32 +3,31 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "LINESeedKR-Bd";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
-    format("woff2");
-  font-weight: 700;
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
   font-style: normal;
 }
 
 * {
-  font-family: "LINESeedKR-Bd";
+  font-family: "Pretendard-Regular";
   word-break: keep-all;
 }
 
 .hero {
-  @apply text-[2.5rem];
+  @apply text-[2.5rem] font-extrabold;
 }
 
 .h1 {
-  @apply text-[1.75rem];
+  @apply text-[1.75rem] font-extrabold;
 }
 
 .h2 {
-  @apply text-[1.5rem];
+  @apply text-[1.5rem] font-extrabold;
 }
 
 .h3 {
-  @apply text-[1.25rem];
+  @apply text-[1.25rem] font-extrabold;
 }
 
 .body1 {
